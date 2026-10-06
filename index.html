@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soul Over Salary · Christopher Hager</title>
+
+<!-- Quiet publish: the link works for anyone it is given to, search engines skip it.
+     To make this page publicly indexable, delete the two lines below and robots.txt. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+
+<meta name="author" content="Christopher Hager">
+<meta name="description" content="The time I said no to $900,000. Three times. And what the year after it actually cost.">
+<meta property="og:title" content="Soul Over Salary">
+<meta property="og:description" content="The time I said no to $900,000. Three times. And what the year after it actually cost.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#1B0C20">
+
+<style>
+/* ── Self-hosted type. Nothing here reaches the internet. ───────────── */
+@font-face{font-family:'Space Grotesk';src:url('./fonts/SpaceGrotesk-a57c9413.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Space Grotesk';src:url('./fonts/SpaceGrotesk-e911c2d9.woff2') format('woff2');font-weight:300 700;font-style:normal;font-display:swap;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'DM Sans';src:url('./fonts/DMSans-f6298972.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap;}
+@font-face{font-family:'DM Sans';src:url('./fonts/DMSans-151a53ae.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Instrument Serif';src:url('./fonts/InstrumentSerif-99cc6edf.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Instrument Serif';src:url('./fonts/InstrumentSerif-fa1a1a83.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+
+:root{
+  --crown:#1B0C20;
+  --crown-2:#2A1130;
+  --mirror:#E7E7E7;
+  --ankh:#A57626;
+  --ankh-hi:#D9A648;
+  --triton:#7C2D50;
+  --mystic:#3B1A4C;
+  --gaia:#1D3237;
+  --paper:#FBF8F4;
+  --ink:#1B0C20;
+  --ink-2:#584C5E;
+  --rule:rgba(27,12,32,.14);
+  --display:'Instrument Serif',Georgia,serif;
+  --head:'Space Grotesk',"Helvetica Neue",Arial,sans-serif;
+  --body:'DM Sans',-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:19px;line-height:1.72;
+  font-variant-ligatures:common-ligatures;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 28px;}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.hero{
+  position:relative;overflow:hidden;color:var(--mirror);
+  background:
+    radial-gradient(ellipse 120% 100% at 50% 50%, #1B0C20 0%, #2A1130 45%, #7C2D50 100%);
+  padding:70px 0 78px;text-align:center;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(231,231,231,.11) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+.hero > *{position:relative;z-index:1;}
+.hero img.logo{width:190px;height:auto;opacity:.95;margin-bottom:38px;}
+.kicker{
+  font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--ankh-hi);margin:0 0 20px;
+}
+h1{
+  font-family:var(--display);font-weight:400;font-size:clamp(3.1rem,11vw,5.4rem);
+  line-height:.94;letter-spacing:-.02em;margin:0 0 22px;color:#fff;
+}
+h1 em{font-style:italic;color:var(--ankh-hi);}
+.dek{
+  font-family:var(--body);font-size:1.03rem;line-height:1.6;max-width:30em;
+  margin:0 auto;color:rgba(231,231,231,.76);
+}
+.byline{
+  margin-top:34px;padding-top:22px;border-top:1px solid rgba(165,118,38,.34);
+  display:inline-block;font-family:var(--head);font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(231,231,231,.6);
+}
+
+/* ── The ladder ─────────────────────────────────────────────────────── */
+.ladder{
+  display:flex;gap:10px;justify-content:center;align-items:flex-end;
+  margin:46px auto 0;max-width:430px;
+}
+.rung{flex:1;text-align:center;}
+.rung .bar{
+  background:linear-gradient(180deg,rgba(165,118,38,.55),rgba(165,118,38,.12));
+  border-top:2px solid var(--ankh-hi);border-radius:3px 3px 0 0;
+}
+.rung:nth-child(1) .bar{height:46px;}
+.rung:nth-child(2) .bar{height:70px;}
+.rung:nth-child(3) .bar{height:102px;background:linear-gradient(180deg,rgba(217,166,72,.85),rgba(165,118,38,.15));}
+.rung .amt{
+  font-family:var(--display);font-size:1.26rem;color:#fff;margin-bottom:7px;display:block;
+}
+.rung .lab{
+  font-family:var(--head);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:rgba(231,231,231,.5);margin-top:10px;display:block;
+}
+.rung:nth-child(3) .lab{color:var(--ankh-hi);}
+
+/* ── Body ───────────────────────────────────────────────────────────── */
+main{padding:64px 0 20px;}
+main p{margin:0 0 1.25em;}
+main p.lead{font-size:1.22rem;line-height:1.62;color:var(--ink);}
+main strong{font-weight:700;}
+main em{font-style:italic;}
+
+h2{
+  font-family:var(--head);font-weight:600;font-size:1.62rem;line-height:1.22;
+  letter-spacing:-.015em;margin:0 0 .7em;
+}
+.sec{margin-top:76px;}
+.sec .glyph{display:block;width:21px;height:auto;margin:0 0 14px;opacity:.8;}
+.sec .eyebrow{
+  font-family:var(--head);font-size:10px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--ankh);margin:0 0 10px;
+}
+
+/* ── Quote blocks ───────────────────────────────────────────────────── */
+blockquote{
+  margin:2.1em 0;padding:0 0 0 24px;border-left:3px solid var(--ankh);
+  font-family:var(--display);font-size:1.5rem;line-height:1.38;color:var(--mystic);
+}
+blockquote p{margin:0 0 .45em;}
+blockquote p:last-child{margin-bottom:0;}
+blockquote cite{
+  display:block;font-family:var(--head);font-style:normal;font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);margin-top:14px;
+}
+
+.panel{
+  position:relative;overflow:hidden;color:var(--mirror);border-radius:4px;
+  background:radial-gradient(ellipse 140% 120% at 50% 40%, #2A1130 0%, #1B0C20 55%, #3B1A4C 100%);
+  padding:44px 38px;margin:2.6em 0;text-align:center;
+}
+.panel::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background-image:radial-gradient(rgba(231,231,231,.1) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+.panel > *{position:relative;z-index:1;}
+.panel img.mark{width:30px;height:auto;margin:0 auto 18px;display:block;opacity:.9;}
+.panel .big{
+  font-family:var(--display);font-size:clamp(1.55rem,4.6vw,2.05rem);line-height:1.3;
+  color:#fff;margin:0;
+}
+.panel .big em{color:var(--ankh-hi);font-style:italic;}
+.panel .attrib{
+  font-family:var(--head);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(231,231,231,.52);margin:18px 0 0;
+}
+
+/* ── Two signals ────────────────────────────────────────────────────── */
+.signals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2.4em 0;}
+.sig{
+  border:1px solid var(--rule);border-radius:4px;padding:22px 20px;background:#fff;
+}
+.sig .n{
+  font-family:var(--display);font-size:2.3rem;line-height:1;color:var(--ankh);display:block;margin-bottom:10px;
+}
+.sig .t{font-family:var(--head);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);display:block;margin-bottom:8px;}
+.sig .s{font-family:var(--display);font-size:1.22rem;line-height:1.35;color:var(--mystic);}
+.sig.second{background:linear-gradient(180deg,#fff,#faf4ec);border-color:rgba(165,118,38,.4);}
+
+/* ── 90/10 ──────────────────────────────────────────────────────────── */
+.split{margin:2.3em 0;}
+.split .track{display:flex;height:46px;border-radius:4px;overflow:hidden;}
+.split .ten{
+  width:10%;background:var(--ankh);display:flex;align-items:center;justify-content:center;
+  font-family:var(--head);font-size:11px;font-weight:700;color:#1B0C20;
+}
+.split .ninety{
+  width:90%;background:var(--crown);display:flex;align-items:center;justify-content:center;
+  font-family:var(--head);font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--mirror);
+}
+.split .legend{
+  display:flex;justify-content:space-between;margin-top:10px;
+  font-family:var(--head);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
+}
+
+/* ── Bought list ────────────────────────────────────────────────────── */
+ul.bought{list-style:none;margin:1.8em 0;padding:0;}
+ul.bought li{
+  position:relative;padding:0 0 0 30px;margin:0 0 1.05em;
+}
+ul.bought li::before{
+  content:"";position:absolute;left:0;top:.62em;width:13px;height:2px;background:var(--ankh);
+}
+
+hr.rule{
+  border:0;height:1px;background:var(--rule);margin:66px 0;
+}
+.rule-gold{
+  border:0;height:0;border-top:2px solid var(--ankh);width:54px;margin:58px auto;
+}
+
+.ask{
+  font-family:var(--display);font-size:clamp(1.8rem,5.4vw,2.5rem);line-height:1.22;
+  color:var(--mystic);text-align:center;margin:1.3em 0 .4em;
+}
+.ask-sub{text-align:center;color:var(--ink-2);font-size:1.02rem;margin:0 0 1em;}
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+footer{
+  position:relative;overflow:hidden;margin-top:84px;color:var(--mirror);text-align:center;
+  background:radial-gradient(ellipse 130% 120% at 50% 50%, #1B0C20 0%, #2A1130 50%, #7C2D50 100%);
+  padding:62px 0 54px;
+}
+footer::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background-image:radial-gradient(rgba(231,231,231,.1) 1px, transparent 1.2px);
+  background-size:7px 7px;
+}
+footer > *{position:relative;z-index:1;}
+footer .closing{
+  font-family:var(--display);font-size:1.3rem;line-height:1.5;max-width:30em;margin:0 auto 34px;
+  color:rgba(231,231,231,.86);font-style:italic;
+}
+footer img.logo{width:200px;height:auto;opacity:.92;}
+footer .sig-name{
+  font-family:var(--head);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ankh-hi);margin:26px 0 0;
+}
+footer .meta{
+  font-family:var(--head);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(231,231,231,.42);margin:12px 0 0;
+}
+
+@media (max-width:620px){
+  body{font-size:17.5px;}
+  .wrap{padding:0 22px;}
+  .signals{grid-template-columns:1fr;}
+  .panel{padding:34px 24px;}
+  blockquote{font-size:1.3rem;}
+  .ladder{max-width:100%;}
+  .rung .amt{font-size:1.02rem;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="./assets/logo-inline-light.png" alt="Christopher Hager">
+    <p class="kicker">Learn more about me</p>
+    <h1>Soul Over<br><em>Salary</em></h1>
+    <p class="dek">The time I said no to $900,000. Three times. And what the year after it actually cost.</p>
+
+    <div class="ladder">
+      <div class="rung"><span class="amt">$750K</span><div class="bar"></div><span class="lab">Declined</span></div>
+      <div class="rung"><span class="amt">$825K</span><div class="bar"></div><span class="lab">Declined</span></div>
+      <div class="rung"><span class="amt">$900K</span><div class="bar"></div><span class="lab">Declined</span></div>
+    </div>
+
+    <div class="byline">Christopher Hager · Guanacaste, Costa Rica</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="lead">The third phone call came in July of 2025.</p>
+
+  <p>I had already said no twice. Which means a man in an office in California had to walk back into a room, for the second time, explain that the guy in Costa Rica had turned them down again, and get approval to come up another seventy-five thousand dollars.</p>
+
+  <p>Seven hundred fifty thousand. Then eight twenty-five. Then another seventy-five thousand on top of the eight twenty-five, which brought us to a total of <strong>$900,000 guaranteed over eighteen months.</strong> Territory Sales Manager for a Fortune 500 insurance company, running the California South Coast.</p>
+
+  <p>When he said the last number, he added this:</p>
+
+  <blockquote>
+    <p>"If this was part of a chess match, brilliantly played. That's the last number I can come back with. If it's not the one that puts you over the edge, we're going back to the drawing board and re-interviewing, because you blew people away."</p>
+    <cite>The recruiter, July 2025</cite>
+  </blockquote>
+
+  <p>I wasn't playing chess. I wasn't playing anything. I'd already left the board and had been living in another country for two years.</p>
+
+  <p>And I want to be very clear, because people assume there was a strategy: I did not negotiate. I did not counter. I did not do the thing where you go quiet on the phone and let the other guy sweat into his lanyard. I just kept saying no, roughly the way a four-year-old says no to a vegetable, and a Fortune 500 company kept reading it as tactics. Somewhere there is a spreadsheet with my name on it and three increasingly panicked rows.</p>
+
+  <p>Turns out the strongest position you can hold in any negotiation is sincerely not wanting the thing.</p>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/water-dark.png" alt="">
+    <p class="eyebrow">The Body Knew First</p>
+    <h2>What my body did with it</h2>
+
+    <p>I want to be honest about this part, because the spiritual version of this story is a lie.</p>
+
+    <p>When that number landed, my solar plexus lit up. Beaming. <em>Of course you're worth this. Of course this is your true value.</em> It spread up into my chest as warmth and then dropped into a sacral stirring that felt, genuinely, incredible. There was pride in it. I'm not going to pretend there wasn't.</p>
+
+    <p>And then I sat with it one breath longer, and the floor went out of my stomach.</p>
+
+    <p>Because I already knew.</p>
+
+    <div class="signals">
+      <div class="sig">
+        <span class="n">1</span>
+        <span class="t">Solar plexus · instant</span>
+        <span class="s">"You are valued."</span>
+      </div>
+      <div class="sig second">
+        <span class="n">2</span>
+        <span class="t">Gut · three seconds later</span>
+        <span class="s">"And you're still not going."</span>
+      </div>
+    </div>
+
+    <p>Two signals. In that order. Most people never notice there are two. They feel the first one, decide that's the answer, and sign.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/ibis-dark.png" alt="">
+    <p class="eyebrow">The Record</p>
+    <h2>Who I was before this</h2>
+
+    <p>I spent fourteen years at Aflac. My best year I grossed $1.49 million.</p>
+
+    <p>I'm not hiding where I came from. I loved the people. I was good at it. And somewhere in the back half of that run I became something I never actually chose: the provider.</p>
+
+    <p>Not a man who provides. <strong>The Provider.</strong> Capital P. A full costume. No cape, no powers, just a very good watch and the slow creeping sense that you're being hollowed out by an organization that would replace you in nine business days and misspell your name in the goodbye email.</p>
+
+    <p>Then the org changed. My mentor was pushed out, a new leader came in, and the job stopped being fun. New rules. New meetings. <em>I don't care about your results, get them my way.</em> Within two years, half the team my mentor had built was gone and the fastest-growing region in the country had cratered to a five out of five.</p>
+
+    <p>The part that broke me was a meeting.</p>
+
+    <p>A fifth mandatory weekly meeting. Five hours. I had thirteen regions reporting to me, so the strategy on the table was that I'd spend five hours a week sitting in a chair demonstrating my commitment to the people I was now too busy sitting in a chair to help. That is corporate America's one true innovation: <strong>the recurring meeting about why we're behind, which is the reason we're behind.</strong></p>
+
+    <p>So I told the director of sales I was going to resign.</p>
+
+    <p>He asked what it would take to keep me. He offered to pull me out of the meetings. He offered to move me to performance.</p>
+
+    <p>And I said yes.</p>
+
+    <p>I told myself it was for the people, and part of that was true. The other part is that I was making more money than I'd ever dared to want, and I could see exactly how to make more.</p>
+
+    <p>That's the moment I chose my salary over my soul. Not dramatically. Nobody does it dramatically. <strong>You do it in a hallway, in about four seconds, by accepting a reasonable accommodation.</strong></p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/ankh-dark.png" alt="">
+    <p class="eyebrow">2019</p>
+    <h2>The door</h2>
+
+    <p>Hudson was 4. Hendrix was 3. Every day I'd come home, open the door, and they'd come tearing down the hall screaming <em>Daddy</em> and hit me at the knees. It was the best part of my day. Not a close second. The best part.</p>
+
+    <p>One day they came running and I said <em>not now.</em></p>
+
+    <p>And I yelled it.</p>
+
+    <p>They froze in their tracks. I can still see their faces. I said <em>I just need a minute,</em> went into the bedroom, threw my bag on the bed, collapsed on top of it, and lay there while Pixie quietly steered them away. <em>Babe, are you okay?</em></p>
+
+    <p>For the next month I parked a block and a half up the street, where they couldn't see the car. I'd sit there and put on something light, classical usually, and breathe for five or ten minutes. So that when I finally opened that door, I wouldn't be a dick to my children.</p>
+
+    <p>That's when I knew. Not because of the money, and not because of the new boss. Because of a thought that arrived in that parked car and would not leave:</p>
+
+    <div class="panel">
+      <img class="mark" src="./assets/horus-light.png" alt="">
+      <p class="big">One day my sons are going to ask me whether they should stay in something they hate or go do something they love. And the only way I can look them in the face and say <em>"go"</em> is if I go now.</p>
+    </div>
+
+    <p>I didn't have the words <em>soul over salary</em> yet. I had that sentence. It still took me another seven months to actually leave.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/braid-dark.png" alt="">
+    <p class="eyebrow">Three Decades, One Question</p>
+    <h2>The conversation I was actually afraid of</h2>
+
+    <p>Here's what I got wrong for about twenty years.</p>
+
+    <p>When the offer came, the hard part was never the recruiter. It was walking into the room and telling my wife. Because we needed the money. Genuinely needed it. And she wanted me to take it.</p>
+
+    <p>So I asked her the question I've now asked her three times, in three different decades.</p>
+
+    <p class="ask" style="margin:1em 0 .6em;">Do you trust me?</p>
+
+    <p>The first time I asked it I was in my mid-twenties and I'd just been robbed, because I was selling drugs on the side. She told me flatly she couldn't be with someone who did that. I said fine, but without it I make about $49,000 a year, and the bottle service and the parties and all of it goes away. She said:</p>
+
+    <blockquote>
+      <p>"I'm not with you for your money, you big idiot. I just love you."</p>
+    </blockquote>
+
+    <p>The second time, I left a ten-year career in post-production for a job that was 100% commission. No base. No floor. She said, <em>"I'm not in it for the money. I'm in it for you."</em></p>
+
+    <p>And the third time, I stood in our house in Costa Rica and told her I didn't want to leave her, this family, and this country to go do something I already knew I wouldn't love.</p>
+
+    <p>She said: <em>"Okay. But it's only eighteen months, and then we could be in a completely different space. I just want you to consider it."</em></p>
+
+    <p>And I said: <em>"I'm looking at eighteen months away from my boys. Three weeks gone, one week home, three weeks gone. They're 10 and 9. By the time this thing is over they're 11 and 10. That's prime. That's the window where a boy still wants his father in the room. And I could get pulled right back into the matrix and talked into believing that's just my life now."</em></p>
+
+    <p>She looked at me for a second and said, <em>"You're right. If that's not a sacrifice you think we need to make, then maybe we don't."</em></p>
+
+    <p>And I said the thing I didn't know was a title yet:</p>
+
+    <div class="panel">
+      <img class="mark" src="./assets/ankh-light.png" alt="">
+      <p class="big">"I don't think choosing my salary over my <em>soul</em> is ever a sacrifice I want to make again."</p>
+      <p class="attrib">Costa Rica · July 2025</p>
+    </div>
+
+    <p>She said <em>okay</em>, gave me a hug, and never brought it up again.</p>
+
+    <p>When I came back with $825,000 she said, <em>"Still a no, right?"</em> Right.</p>
+
+    <p>When I came back with $900,000 she looked at me and said, <em>"I know it's a no. But can you at least admit that it's tempting?"</em></p>
+
+    <p>Yes. I can admit it.</p>
+
+    <div class="split">
+      <div class="track">
+        <div class="ten">10%</div>
+        <div class="ninety">NO F***ING WAY</div>
+      </div>
+      <div class="legend">
+        <span>"What are you, crazy?"</span>
+        <span>Everything else</span>
+      </div>
+    </div>
+
+    <p>She said, <em>"Okay. Then let's buckle up and see what comes of this."</em></p>
+
+    <p>And standing there, my only thought was: <em>God damn, I love her so much.</em></p>
+
+    <p>Complete trust. In me, and in herself, when I speak those words. That is not something we were handed. It has been hard-fought inside our relationship, over years, and it pays dividends I don't think I've finished counting.</p>
+
+    <p>Because notice what actually happened there. <strong>I'd spent twenty years bracing for a conversation with a version of my wife who has never once shown up.</strong> The provider thing was never her ask. It was mine. I built it, I carried it, and three separate times I needed her to say out loud that she had not ordered it.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/scarab-dark.png" alt="">
+    <p class="eyebrow">And Then What</p>
+    <h2>What the no actually bought</h2>
+
+    <p>I want to be careful here, because the clean version of this is a lie too.</p>
+
+    <p>It bought a lot of financial struggle. That's the real answer and I'm not going to dress it up.</p>
+
+    <p>It also bought this:</p>
+
+    <ul class="bought">
+      <li><strong>Learning to receive.</strong> Family and friends carried us for months. I had to let them. That is a completely different muscle than providing, and I had never once used it.</li>
+      <li><strong>Putting the provider down.</strong> Not performing it. Actually setting it on the floor. Pixie works and earns now. I am not the sole engine of this family, and it turns out I never had to be.</li>
+      <li><strong>An absurd abundance of love and joy.</strong> With her, with my boys, with my friends, with this community.</li>
+      <li><strong>Perspective.</strong> It put the whole thing back in order: my wife, my kids, my family, my friends, my community. That order. Money would have been nice. I would not have chosen differently.</li>
+    </ul>
+
+    <p>And one more thing I didn't expect: <strong>clarity about why I'd ever leave again.</strong> If I'm ever away from my family, it will be in service of something greater than money. Money isn't the greater purpose. It never was. It was just the thing I happened to be excellent at.</p>
+  </section>
+
+  <section class="sec">
+    <img class="glyph" src="./assets/crescent-dark.png" alt="">
+    <p class="eyebrow">The Sentence</p>
+    <h2>Six months to go</h2>
+
+    <p>This is the part that settled it for good.</p>
+
+    <p>Around the one-year mark I caught myself thinking: <em>Wow. I'd only have six months left.</em></p>
+
+    <p>And then I heard it.</p>
+
+    <div class="panel">
+      <img class="mark" src="./assets/crescent-light.png" alt="">
+      <p class="big">"Only six months to go" is not something a man says about a job. That's something a man says <em>through glass,</em> with a phone in his hand.</p>
+    </div>
+
+    <p>I had just, in my own head, described a $900,000 contract as a sentence I was relieved not to be serving.</p>
+
+    <p>Golden handcuffs. Thirty days of PTO. No waiting period on benefits. A 4.5% defined contribution regardless of participation. Beautiful cuffs, honestly. Really well made. Hand-stitched. <strong>Still cuffs.</strong></p>
+
+    <p>For a lot of people nine hundred thousand dollars is genuinely life-changing, and I know that. I'm not pretending otherwise.</p>
+
+    <p>For me, on that day, in that body, it was a very well-upholstered cage.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" style="margin-top:0;">
+    <img class="glyph" src="./assets/horus-dark.png" alt="">
+    <p class="eyebrow">For You, Not Me</p>
+    <h2>What I actually want to say to you</h2>
+
+    <p>I'm not telling you this so you'll be impressed. I'm telling you because there are only two moves inside this whole story, and you've probably got one of them sitting in front of you right now.</p>
+
+    <p><strong>The first is saying yes before you know how.</strong></p>
+
+    <p>Before the plan exists. Before the money makes sense. Before you can explain it at a dinner party without sounding insane. I walked away from seven figures with no replacement income, in a foreign country, with two small boys and no idea what I was walking into. The <em>how</em> has never once arrived in advance. It arrives on the way.</p>
+
+    <p><strong>The second is saying no to the thing that is genuinely, legitimately tempting.</strong></p>
+
+    <p>Not the obvious bad deal. Anybody can turn that down. I mean the good one. Good people, good money, a real promotion you actually earned. No flaw in it anywhere to point at and say <em>see, that's why.</em></p>
+
+    <p>That one is hard precisely because nothing is wrong with it. It just isn't yours.</p>
+
+    <p>And here's the only test I've found that works: <strong>your body answers before your mind gets its story together.</strong> Solar plexus lit up. Stomach dropped. Both true, three seconds apart. The job isn't to pick the pleasant one. The job is to notice there were two, and then be honest with yourself about which one actually knew.</p>
+
+    <p>Most of us never get the $900,000 version of this. We get the Tuesday version. A client we should release. A room we've outgrown. A yes we gave eighteen months ago that is quietly eating us from the inside.</p>
+
+    <p><strong>Same signal. Smaller number. Same door.</strong></p>
+
+    <hr class="rule-gold">
+
+    <p class="ask">What's yours right now?</p>
+    <p class="ask-sub">I'd actually like to know.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="closing">I spend most of my days helping people hear that signal before it has to shout. If something in here is still moving in your chest ten minutes from now, that's the part worth listening to.</p>
+    <img class="logo" src="./assets/logo-inline-light.png" alt="Christopher Hager">
+    <p class="sig-name">Christopher Hager</p>
+    <p class="meta">cahager.com · Guanacaste, Costa Rica</p>
+  </div>
+</footer>
+
+</body>
+</html>
